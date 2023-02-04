@@ -9,9 +9,10 @@
   "description": "A simple Node app built on Express, instantly up and running.",
   "main": "server.js",
   "scripts": {
+    "start": "npm run build && node dist/server.js",
     "build": "npx tsc",
     "startdev": "nodemon -e ts --exec \"npm run build && npm run dev-dotenv\"",
-    "start": "node dist/server.js"
+    "dev": "node dist/server.js"
   },
   "dependencies": {
     "@fastify/static": "^6.6.0",
