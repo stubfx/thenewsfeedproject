@@ -1,6 +1,9 @@
 import {PARAM} from "./RSSFeeds/feedList.js";
 
 export function generateChannelPath(channelPath: String) : Array<String>{
+    if (!channelPath) {
+        return null
+    }
     return channelPath.split("/")
 }
 
