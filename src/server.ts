@@ -21,7 +21,9 @@ const fastify = Fastify({
 
 fastify.get("/", async (request, reply) => {
     let feedName = request.query["feed"];
-    reply.send(await FeedFactory.getFeedObject(feedName))
+    let p1 = request.query["p1"];
+    let p2 = request.query["p2"];
+    reply.send(await FeedFactory.fetchData(feedName, [p1, p2]))
 })
 
 // Run the server and report out to the logs

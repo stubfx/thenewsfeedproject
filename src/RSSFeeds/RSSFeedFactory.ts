@@ -6,8 +6,8 @@ export class RSSFeedFactory {
     // private allFeeds:StandardRSSFeedChannel[] = [
     //     new StandardRSSFeedChannel()
     // ]
-    async getFeedObject(feedName: string): Promise<RSSJsonInterface[]> {
+    async fetchData(feedName: string, params: String[] = []): Promise<RSSJsonInterface[]> {
         let channel = new StandardRSSFeedChannel()
-        return await channel.fetch(feedName)
+        return await channel.fetch(feedName, params)
     }
 }
