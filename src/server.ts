@@ -1,12 +1,11 @@
-import path from 'path';
+// import path from 'path';
 import Fastify from 'fastify'
-import fastifyStatic from '@fastify/static';
-import {dirname} from "node:path";
-import {fileURLToPath} from "node:url";
-// import {init} from "./feedFetcher.js";
+// import fastifyStatic from '@fastify/static';
+// import {dirname} from "node:path";
+// import {fileURLToPath} from "node:url";
 import {RSSFeedFactory} from "./RSSFeeds/RSSFeedFactory.js";
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
+// const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const FeedFactory = new RSSFeedFactory()
 
@@ -15,14 +14,14 @@ const fastify = Fastify({
 })
 
 // Setup our static files
-fastify.register(fastifyStatic, {
-    root: path.join(__dirname, "public"),
-    prefix: "/", // optional: default '/'
-});
+// fastify.register(fastifyStatic, {
+//     root: path.join(__dirname, "public"),
+//     prefix: "/", // optional: default '/'
+// });
 
-fastify.get("/news/:feedName", async (request, reply) => {
-    let feedName = request.params["feedName"];
-    reply.send(await FeedFactory.getFeedObject(feedName).getData())
+fastify.get("/", async (request, reply) => {
+    let feedName = request.query["feed"];
+    reply.send(await FeedFactory.getFeedObject(feedName))
 })
 
 // Run the server and report out to the logs
