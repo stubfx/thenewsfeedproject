@@ -5,7 +5,7 @@ export function generateChannelPath(channelPath: String) : Array<String>{
 }
 
 export function addUrlParams(url, params: String[]) : String{
-    if (!params || params.length < 1) {
+    if (!url || !params || params.length < 1) {
         return url
     }
     let newUrl = url.replace(PARAM, params.shift())
@@ -28,6 +28,5 @@ export function findFeedUrl(channelPath: String[], channels: RSS_Channel[]) {
         let childUrl = findFeedUrl(channelPath, currentChannel.subChannels)
         return childUrl || url
     }
-    console.error(`No channel found for ${channelPath}`)
     return null;
 }

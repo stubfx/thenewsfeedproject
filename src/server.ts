@@ -20,6 +20,7 @@ const fastify = Fastify({
 // });
 
 fastify.get("/", async (request, reply) => {
+    console.log(`Handling request: ${request.raw.url}`)
     let feedName = request.query["feed"];
     let p1 = request.query["p1"];
     let p2 = request.query["p2"];

@@ -12,7 +12,7 @@ export class StandardRSSFeedChannel {
         let url = findFeedUrl(generateChannelPath(feedPath), this.channelData);
         url = addUrlParams(url, params)
         try {
-            console.log(url)
+            if (!url) return null
             let response = await Utils.fetchWithTimeout(url)
             let rssText = await response.text()
             return JSON.parse(xmlParser.toJson(rssText, null))['rss']['channel']['item']
