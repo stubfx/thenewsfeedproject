@@ -88,5 +88,226 @@ export const RSS_STANDARD_FEEDS: RSS_Channel[] = [
             subChannels: null
         }
         ]
+    },
+    {
+        //https://www.nytimes.com/rss
+        name: "nytimes",
+        url: "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
+        subChannels: [
+            {
+                "name": "news",
+                "url": "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
+                "subChannels": [
+                  {
+                    "url": "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
+                    "name": "NYTimes.comHomePage(U.S.)",
+                    "subChannels": [
+                      {
+                        "h3": "World",
+                        "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
+                        "name": "World"
+                      },
+                      {
+                        "url": "https://rss.nytimes.com/services/xml/rss/nyt/Africa.xml",
+                        "name": "Africa"
+                      },
+                      {
+                        "url": "https://rss.nytimes.com/services/xml/rss/nyt/Americas.xml",
+                        "name": "Americas"
+                      },
+                      {
+                        "url": "https://rss.nytimes.com/services/xml/rss/nyt/AsiaPacific.xml",
+                        "name": "AsiaPacific"
+                      },
+                      {
+                        "url": "https://rss.nytimes.com/services/xml/rss/nyt/Europe.xml",
+                        "name": "Europe"
+                      },
+                      {
+                        "url": "https://rss.nytimes.com/services/xml/rss/nyt/MiddleEast.xml",
+                        "name": "MiddleEast"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "U.S.",
+                    "url": "https://rss.nytimes.com/services/xml/rss/nyt/US.xml",
+                    "subChannels": [
+                      {
+                        "name": "U.S.",
+                        "url": "https://rss.nytimes.com/services/xml/rss/nyt/US.xml",
+                        "subChannels": null
+                      },
+                      {
+                        "url": "https://rss.nytimes.com/services/xml/rss/nyt/Education.xml",
+                        "name": "Education",
+                        "subChannels": null
+                      },
+                      {
+                        "url": "https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml",
+                        "name": "Politics",
+                        "subChannels": [
+                          {
+                            "url": "https://rss.nytimes.com/services/xml/rss/nyt/Upshot.xml",
+                            "name": "TheUpshot",
+                            "subChannels": null
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "N.Y./Region",
+                    "url": "https://rss.nytimes.com/services/xml/rss/nyt/NYRegion.xml",
+                    "subChannels": null
+                  },
+                  {
+                    "url": "https://rss.nytimes.com/services/xml/rss/nyt/Business.xml",
+                    "name": "Business",
+                    "subChannels": [
+                      {
+                        "url": "https://rss.nytimes.com/services/xml/rss/nyt/Business.xml",
+                        "name": "Business",
+                        "subChannels": null
+                      },
+                      {
+                        "url": "https://rss.nytimes.com/services/xml/rss/nyt/EnergyEnvironment.xml",
+                        "name": "Energy&Environment",
+                        "subChannels": null
+                      },
+                      {
+                        "url": "https://rss.nytimes.com/services/xml/rss/nyt/SmallBusiness.xml",
+                        "name": "SmallBusiness",
+                        "subChannels": null
+                      },
+                      {
+                        "url": "https://rss.nytimes.com/services/xml/rss/nyt/Economy.xml",
+                        "name": "Economy",
+                        "subChannels": null
+                      },
+                      {
+                        "url": "https://rss.nytimes.com/services/xml/rss/nyt/Dealbook.xml",
+                        "name": "DealBook",
+                        "subChannels": null
+                      },
+                      {
+                        "url": "https://rss.nytimes.com/services/xml/rss/nyt/MediaandAdvertising.xml",
+                        "name": "Media&Advertising",
+                        "subChannels": null
+                      },
+                      {
+                        "url": "https://rss.nytimes.com/services/xml/rss/nyt/YourMoney.xml",
+                        "name": "YourMoney",
+                        "subChannels": null
+                      }
+                    ]
+                  },
+                  {
+                    "url": "https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml",
+                    "name": "Technology",
+                    "subChannels": [
+                      {
+                        "url": "https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml",
+                        "name": "Technology",
+                        "subChannels": null
+                      },
+                      {
+                        "url": "https://rss.nytimes.com/services/xml/rss/nyt/PersonalTech.xml",
+                        "name": "PersonalTech",
+                        "subChannels": null
+                      }
+                    ]
+                  },
+                  {
+                    "url": "https://rss.nytimes.com/services/xml/rss/nyt/Sports.xml",
+                    "name": "Sports",
+                    "subChannels": [
+                      {
+                        "url": "https://rss.nytimes.com/services/xml/rss/nyt/Baseball.xml",
+                        "name": "Baseball",
+                        "subChannels": null
+                      },
+                      {
+                        "url": "https://rss.nytimes.com/services/xml/rss/nyt/CollegeBasketball.xml",
+                        "name": "CollegeBasketball",
+                        "subChannels": null
+                      },
+                      {
+                        "url": "https://rss.nytimes.com/services/xml/rss/nyt/CollegeFootball.xml",
+                        "name": "CollegeFootball",
+                        "subChannels": null
+                      },
+                      {
+                        "url": "https://rss.nytimes.com/services/xml/rss/nyt/Golf.xml",
+                        "name": "Golf",
+                        "subChannels": null
+                      },
+                      {
+                        "url": "https://rss.nytimes.com/services/xml/rss/nyt/Hockey.xml",
+                        "name": "Hockey",
+                        "subChannels": null
+                      },
+                      {
+                        "url": "https://rss.nytimes.com/services/xml/rss/nyt/ProBasketball.xml",
+                        "name": "Pro-Basketball",
+                        "subChannels": null
+                      },
+                      {
+                        "url": "https://rss.nytimes.com/services/xml/rss/nyt/ProFootball.xml",
+                        "name": "Pro-Football",
+                        "subChannels": null
+                      },
+                      {
+                        "url": "https://rss.nytimes.com/services/xml/rss/nyt/Soccer.xml",
+                        "name": "Soccer",
+                        "subChannels": null
+                      },
+                      {
+                        "url": "https://rss.nytimes.com/services/xml/rss/nyt/Tennis.xml",
+                        "name": "Tennis",
+                        "subChannels": null
+                      }
+                    ]
+                  },
+                  {
+                    "url": "https://rss.nytimes.com/services/xml/rss/nyt/Science.xml",
+                    "name": "Science",
+                    "subChannels": [
+                      {
+                        "name": "Science",
+                        "url": "https://rss.nytimes.com/services/xml/rss/nyt/Science.xml",
+                        "subChannels": null
+                      },
+                      {
+                        "name": "Environment",
+                        "url": "https://rss.nytimes.com/services/xml/rss/nyt/Climate.xml",
+                        "subChannels": null
+                      },
+                      {
+                        "name": "Space & Cosmos",
+                        "url": "https://rss.nytimes.com/services/xml/rss/nyt/Space.xml",
+                        "subChannels": null
+                      }
+                    ]
+                  },
+                  {
+                    "url": "https://rss.nytimes.com/services/xml/rss/nyt/Health.xml",
+                    "name": "Health",
+                    "subChannels": [
+                      {
+                        "name": "Health",
+                        "url": "https://rss.nytimes.com/services/xml/rss/nyt/Health.xml",
+                        "subChannels": null
+                      },
+                      {
+                        "name": "wellblog",
+                        "url": "https://rss.nytimes.com/services/xml/rss/nyt/Well.xml",
+                        "subChannels": null
+                      }
+                    ]
+                  }
+                ]
+              }//https://blog.feedspot.com/world_news_rss_feeds/
+        ]
     }
 ]
