@@ -24,7 +24,9 @@ fastify.get("/", async (request, reply) => {
     let feedName = request.query["feed"];
     let p1 = request.query["p1"];
     let p2 = request.query["p2"];
-    reply.send(await FeedFactory.fetchData(feedName, [p1, p2]))
+    let result = await FeedFactory.fetchData(feedName, [p1, p2])
+    // if result is null, send an empty object instead.
+    reply.send(result || {})
 })
 
 // Run the server and report out to the logs
