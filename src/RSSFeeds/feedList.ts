@@ -103,29 +103,34 @@ export const RSS_STANDARD_FEEDS: RSS_Channel[] = [
                     "name": "NYTimes.comHomePage(U.S.)",
                     "subChannels": [
                       {
-                        "h3": "World",
                         "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
-                        "name": "World"
+                        "name": "World",
+                          "subChannels": null
                       },
                       {
                         "url": "https://rss.nytimes.com/services/xml/rss/nyt/Africa.xml",
-                        "name": "Africa"
+                        "name": "Africa",
+                          "subChannels": null
                       },
                       {
                         "url": "https://rss.nytimes.com/services/xml/rss/nyt/Americas.xml",
-                        "name": "Americas"
+                        "name": "Americas",
+                          "subChannels": null
                       },
                       {
                         "url": "https://rss.nytimes.com/services/xml/rss/nyt/AsiaPacific.xml",
-                        "name": "AsiaPacific"
+                        "name": "AsiaPacific",
+                          "subChannels": null
                       },
                       {
                         "url": "https://rss.nytimes.com/services/xml/rss/nyt/Europe.xml",
-                        "name": "Europe"
+                        "name": "Europe",
+                          "subChannels": null
                       },
                       {
                         "url": "https://rss.nytimes.com/services/xml/rss/nyt/MiddleEast.xml",
-                        "name": "MiddleEast"
+                        "name": "MiddleEast",
+                          "subChannels": null
                       }
                     ]
                   },

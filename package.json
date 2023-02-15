@@ -11,8 +11,7 @@
   "scripts": {
     "start": "npm run build && node dist/server.js",
     "build": "npx tsc",
-    "startdev": "nodemon -e ts --exec \"npm run build && npm run dev-dotenv\"",
-    "dev": "node dist/server.js"
+    "dev": "node -r dotenv/config dist/server.js"
   },
   "dependencies": {
     "@fastify/static": "^6.6.0",
@@ -27,6 +26,7 @@
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^18.11.18",
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "dotenv": "^16.0.0"
   }
 }

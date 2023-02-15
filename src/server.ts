@@ -19,6 +19,15 @@ const fastify = Fastify({
 //     prefix: "/", // optional: default '/'
 // });
 
+fastify.addHook('onRequest', (request, reply, done) => {
+    // check token
+    if (process.env.apikey !== request.query["apikey"]) {
+        reply.code(401)
+        reply.send()
+    }
+    done()
+})
+
 fastify.get("/", async (request, reply) => {
     console.log(`Handling request: ${request.raw.url}`)
     let feedName = request.query["feed"];
